@@ -1,7 +1,7 @@
 $(function() {
-    $btnMenu = $("#js-btn-menu");
-    $gnav = $(".global-nav");
-    $mask = $(".mask");
+    const $btnMenu = $("#js-btn-menu");
+    const $gnav = $(".global-nav");
+    const $mask = $(".mask");
 
     // ハンバーガーメニューをクリックしたとき
     $btnMenu.on("click", function () {
