@@ -7,6 +7,10 @@
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script
+        src="https://code.jquery.com/jquery-4.0.0.min.js"
+        integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao="
+        crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -16,23 +20,26 @@
         <!-- header -->
         <header class="header">
             <div class="container">
-                <div class="header__logo-wrapper">
-                    <h1><a href="#"><img src="img/logo.svg" width="180px" alt="Furniture Design"></a></h1>
+                <div class="header__inner">
+                    <div class="header__logo-wrapper">
+                        <h1><a href="index.html"><img src="img/logo.svg" width="180px" alt="Furniture Design"></a></h1>
+                    </div>
+                    <div class="header__nav">
+                        <nav class="global-nav">
+                            <ul class="global-nav__list">
+                                <li class="global-nav__item"><a href="products.html" class="global-nav__link">PRODUCTS</a></li>
+                                <li class="global-nav__item"><a href="about.html" class="global-nav__link">ABOUT</a></li>
+                                <li class="global-nav__item"><a href="company.html" class="global-nav__link">COMPANY</a></li>
+                                <li class="global-nav__item"><a href="#" class="global-nav__link">CONTACT</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <button type="button" id="js-btn-menu" class="btn-menu">
+                        <span class="btn-menu__line"></span>
+                    </button>
                 </div>
-                <div class="header__nav">
-                    <nav class="global-nav">
-                        <ul class="global-nav__list">
-                            <li class="global-nav__item"><a href="products.html" class="global-nav__link">PRODUCTS</a></li>
-                            <li class="global-nav__item"><a href="about.html" class="global-nav__link">ABOUT</a></li>
-                            <li class="global-nav__item"><a href="company.html" class="global-nav__link">COMPANY</a></li>
-                            <li class="global-nav__item"><a href="#" class="global-nav__link">CONTACT</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <button type="button" id="js-btn-menu" class="btn-menu">
-                    <span class="btn-menu__line"></span>
-                </button>
             </div>
+            <div class="mask"></div>
         </header>
         <!-- header -->
 
@@ -40,32 +47,34 @@
         <main class="content">
 
             <section class="company">
-                <div class="content">
+                <div class="container">
                     <div class="company__inner">
                         <div class="section-title">
                             <h2 class="section-title__title">Company</h2>
                         </div>
-                        <div class="company__info">
-                            <dl class="company-info__description">
-                                <dt>社名</dt>
-                                <dd>株式会社ファニチャーデザイン</dd>
-                                <dt>住所</dt>
-                                <dd>〒107-0062 東京都港区南青山１丁目××××××</dd>
-                                <dt>設立</dt>
-                                <dd>XXXX年XX月</dd>
-                                <dt>資本金</dt>
-                                <dd>XXXX万円</dd>
-                                <dt>従業員数</dt>
-                                <dd>XX名</dd>
-                                <dt>事業内容</dt>
-                                <dd>
-                                    家具、インテリアの企画・生産<br>
-                                    家具、インテリアの販売<br>
-                                    店舗の企画・デザイン・設計<br>
-                                </dd>
-                            </dl>
-                            <div class="company__map">
-                                <iframe width="100%" height="auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2914382280856!2d139.72342666557796!3d35.669825288204194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c820ac932eb%3A0xc68079dd10afd971!2z44CSMTA3LTAwNjIg5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGx77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1611987713735!5m2!1sja!2sjp"></iframe>
+                        <div class="company__body">
+                            <div class="company__info">
+                                <dl class="company-info__description">
+                                    <dt>社名</dt>
+                                    <dd>株式会社ファニチャーデザイン</dd>
+                                    <dt>住所</dt>
+                                    <dd>〒107-0062 東京都港区南青山１丁目××××××</dd>
+                                    <dt>設立</dt>
+                                    <dd>XXXX年XX月</dd>
+                                    <dt>資本金</dt>
+                                    <dd>XXXX万円</dd>
+                                    <dt>従業員数</dt>
+                                    <dd>XX名</dd>
+                                    <dt>事業内容</dt>
+                                    <dd>
+                                        家具、インテリアの企画・生産<br>
+                                        家具、インテリアの販売<br>
+                                        店舗の企画・デザイン・設計<br>
+                                    </dd>
+                                </dl>
+                                <div class="company__map">
+                                    <iframe width="100%" height="auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2914382280856!2d139.72342666557796!3d35.669825288204194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c820ac932eb%3A0xc68079dd10afd971!2z44CSMTA3LTAwNjIg5p2x5Lqs6YO95riv5Yy65Y2X6Z2S5bGx77yR5LiB55uu!5e0!3m2!1sja!2sjp!4v1611987713735!5m2!1sja!2sjp"></iframe>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -78,22 +87,24 @@
         <!-- footer -->
         <footer class="footer">
             <div class="container">
-                <div class="footer__sns">
-                    <div class="sns-list">
-                        <ul class="sns-list__list">
-                            <li class="sns-list__item"><a href="#" class="sns-list__link">INSTAGRAM</a></li>
-                            <li class="sns-list__item"><a href="#" class="sns-list__link">TWITTER</a></li>
-                            <li class="sns-list__item"><a href="#" class="sns-list__link">FACEBOOK</a></li>
-                        </ul>
+                <div class="footer__inner">
+                    <div class="footer__sns">
+                        <div class="sns-list">
+                            <ul class="sns-list__list">
+                                <li class="sns-list__item"><a href="#" class="sns-list__link">INSTAGRAM</a></li>
+                                <li class="sns-list__item"><a href="#" class="sns-list__link">TWITTER</a></li>
+                                <li class="sns-list__item"><a href="#" class="sns-list__link">FACEBOOK</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__copyright-wrapper">
+                        <p class="footer__copyright">&copy;Furniture Design</p>
                     </div>
                 </div>
-                <div class="footer__copyright-wrapper">
-                    <p class="footer__copyright">&copy;Furniture Design</p>
-                </div>
             </div>
-
         </footer>
         <!-- /footer -->
+
     </div>
     <!-- /wrapper -->
 </body>
